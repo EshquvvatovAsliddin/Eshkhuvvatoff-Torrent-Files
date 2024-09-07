@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+import Home from './pages/Home';
+import { Route, Routes } from 'react-router-dom';
+import Games from './pages/Games';
+import Header from './components/Header';
+import Footers from './components/Footer';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      
-    </div>
-  )
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/games" element={<Games />} />
+      </Routes>
+      <Footers />
+    </>
+  );
 }
 
-export default App
+export default App;
